@@ -9577,3 +9577,13 @@ h6,
   padding: 0;
   list-style-type: none;
 }
+.roundeur{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.round{
+
+  width: 350px;
+  height: 240px;
+}
