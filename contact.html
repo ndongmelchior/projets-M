@@ -12,7 +12,7 @@
 
   gtag('config', 'G-S9C2055SCJ');
 </script>
-    <title>DRYME - Free Laundry Service Website Template</title>
+    <title>Domestic'service car</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -73,7 +73,7 @@
         <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" class="navbar-brand">
-                    <h1 class="m-0 text-secondary"><span class="text-primary">DRY</span>ME</h1>
+                    <img src="img/logo_domestique_service_car-removebg-preview.png" alt="">
                 </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -150,8 +150,51 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <a href="https://api.whatsapp.com/send?phone=24165841394" class="btn btn-primary py-md-3 px-md-5 mt-2">Contactez-nous</a>
-
+                    <h1>Formulaire de contact</h1>
+                    <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
+                       <table class="form-style">
+                          <tr>
+                             <td>
+                                <label>
+                                   Votre nom <span class="required">*</span>
+                                </label>
+                             </td>
+                             <td>
+                                <input type="text" name="name" class="long"/>
+                                <span class="error" id="errorname"></span>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <label>
+                                   Votre adresse e-mail <span class="required">*</span>
+                                </label>
+                             </td>
+                             <td>
+                                <input type="email" name="email" class="long"/>
+                                <span class="error" id="erroremail"></span>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td>
+                                <label>
+                                   Message <span class="required">*</span>
+                                </label>
+                             </td>
+                             <td>
+                                <textarea name="message" class="long field-textarea"></textarea>
+                                <span class="error" id="errormsg"></span>
+                             </td>
+                          </tr>
+                          <tr>
+                             <td></td>
+                             <td>
+                                <input type="submit" value="Envoyer">      
+                                <input type="reset" value="Réinitialiser"> 
+                             </td>
+                          </tr>
+                       </table>
+                    </form>
                             </div>
                       
                 </div>
@@ -168,7 +211,7 @@
     <div class="container-fluid bg-primary text-white mt-5 pt-5 px-sm-3 px-md-5">
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
-                <a href=""><h1 class="text-secondary mb-3"><span class="text-white">DRY</span>ME</h1></a>
+                <img src="img/logo_domestique_service_car-removebg-preview.png" alt="">
                 <p>suivez nous sur nos differentes reseaux sociaux</p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -228,6 +271,60 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+
+    <script>
+
+    function validateForm()                                    
+{ 
+    var name = document.forms["myForm"]["name"];               
+    var email = document.forms["myForm"]["email"];    
+    var message = document.forms["myForm"]["message"];   
+   
+    if (name.value == "")                                  
+    { 
+        document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
+        name.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errorname').innerHTML="";  
+    }
+       
+    if (email.value == "")                                   
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    }else{
+        document.getElementById('erroremail').innerHTML="";  
+    }
+   
+    if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (message.value == "")                           
+    {
+        document.getElementById('errormsg').innerHTML="Veuillez entrez un message valide"; 
+        message.focus(); 
+        return false; 
+    }else{
+        document.getElementById('errormsg').innerHTML="";  
+    }
+   
+    return true; 
+    }
+
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
